@@ -100,19 +100,18 @@
 
 /* TECHNOLOGY */
 
+
+
+
 .tech-card {
-  cursor: pointer;
   border-radius: 14px;
   background-color: #121E2D;
   color: white;
   /* width: 170px;
   height: 250px; */
-  width: auto;
-  height: auto;
-  position: relative;
 }
 
-.tech-card::after {
+/* .tech-card::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -122,7 +121,7 @@
   height: 100%;
   background: linear-gradient(125deg, rgba(248,255,0,1) 44%, rgba(255,173,0,1) 61%, rgba(161,0,137,1) 85%);
   border-radius: 14px;
-}
+} */
 
 .tech-card-mt-125 {
   margin-top: 125px;

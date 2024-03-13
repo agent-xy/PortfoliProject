@@ -24,21 +24,21 @@ const SkillCard: React.FC<SkillCardProps> = ({ id, title, content, backgroundIma
   };
 
   return (
-    <div className={` ${isOpen ? 'skill-card-open' :  'w-20'} overflow-hidden h-full ease-in-out duration-300 rounded-3xl bg-cover  cursor-pointer bg-center    `} 
+    <div className={` ${isOpen ? 'skill-card-open' :  'w-20'} select-none overflow-hidden h-full ease-in-out duration-300 rounded-3xl bg-cover  cursor-pointer bg-center    `} 
     style={{backgroundImage: `url(${window.location.origin + '/assets/images/' + backgroundImage}) `}} 
     onClick={handleClick}
     ref={cardRef}>
-      <div className='ease-in-out p-2 h-full w-full '>
+      <div className={`${isOpen? '' : 'bg-black bg-opacity-50'} 'ease-in-out p-2 h-full w-full '`}>
         {
           isOpen ? (
             <div>
               <div className='text-xl'>{title}</div>
-              <div>{content}</div>
+              <div className=''>{content}</div>
             </div>
           ) : (
             <div className='h-full relative'>
-              <div className='h-full flex items-center justify-center'>
-                <div className='-rotate-90'>
+              <div className='h-full flex items-center justify-center overflow-hidden whitespace-nowrap'>
+                <div className='-rotate-90 text-white'>
                   {title}
                 </div>
                 <div className='absolute bottom-0 left-0 w-full h-auto'>
@@ -58,3 +58,8 @@ const SkillCard: React.FC<SkillCardProps> = ({ id, title, content, backgroundIma
 }
 
 export default SkillCard
+
+
+{/* <div className='-rotate-90 text-white'>
+      {title}
+    </div> */}

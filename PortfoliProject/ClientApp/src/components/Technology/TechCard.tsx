@@ -9,7 +9,7 @@ const TechCard = (props: { key: number, platforms: React.ReactNode[], icon: Reac
   );
 
   return (
-    <div className=' tech-card tech-card-shadow flex flex-col justify-between tech-card-shadow'>
+    <div className=' tech-card w-auto h-auto relative tech-card-shadow cursor-pointer flex flex-col justify-between tech-card-shadow'>
       <div className='p-2 text-end flex justify-end'>
         {
           listPlat

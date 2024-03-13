@@ -80,14 +80,13 @@ const CardList = () => {
   };
 
 
-  // Adatokat tartalmazó lista
   const cardDataList = [
-    { id: 0, title: "Card 1", content: listStyle(thrTech), backgroundImage: "heroImage1.jpg" },
-    { id: 1, title: "Card 2", content: listStyle(firstTech), backgroundImage: "heroImage2.jpg" },
-    { id: 2, title: "Card 3", content: listStyle(secTech), backgroundImage: "heroImage3.jpg" },
-    { id: 3, title: "Card 4", content: "Content for Card 4", backgroundImage: "heroImage4.jpg" },
-    { id: 4, title: "Card 5", content: "Content for Card 5", backgroundImage: "heroImage5.jpg" },
-    { id: 5, title: "Card 6", content: "Content for Card 6", backgroundImage: "heroImage6.jpg" }
+    { id: 0, title: "Web Technologies", content: listStyle(thrTech), backgroundImage: "skillCardBackground.jpg" },
+    { id: 1, title: "Frontend", content: listStyle(firstTech), backgroundImage: "heroImage2.jpg" },
+    { id: 2, title: "Backend", content: listStyle(secTech), backgroundImage: "heroImage3.jpg" },
+    { id: 3, title: "Database", content: "Content for Card 4", backgroundImage: "heroImage4.jpg" },
+    { id: 4, title: "SEO", content: "Content for Card 5", backgroundImage: "heroImage5.jpg" },
+    { id: 5, title: "Other Software", content: "Content for Card 6", backgroundImage: "heroImage6.jpg" }
   ];
 
   return (
