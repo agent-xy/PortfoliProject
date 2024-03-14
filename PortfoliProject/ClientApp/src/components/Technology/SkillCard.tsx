@@ -24,7 +24,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ id, title, content, backgroundIma
   };
 
   return (
-    <div className={` ${isOpen ? 'skill-card-open' :  'w-20'} select-none overflow-hidden h-full ease-in-out duration-300 rounded-3xl bg-cover  cursor-pointer bg-center    `} 
+    <div className={` ${isOpen ? 'w-[600px]' :  'w-20'} select-none overflow-hidden h-full ease-in-out duration-300 rounded-3xl bg-cover  cursor-pointer bg-center    `} 
     style={{backgroundImage: `url(${window.location.origin + '/assets/images/' + backgroundImage}) `}} 
     onClick={handleClick}
     ref={cardRef}>

@@ -9,11 +9,9 @@ const TechCard = (props: { key: number, platforms: React.ReactNode[], icon: Reac
   );
 
   return (
-    <div className=' tech-card w-auto h-auto relative tech-card-shadow cursor-pointer flex flex-col justify-between tech-card-shadow'>
+    <div className='bg-[#121E2D] text-[#ffff] rounded-[14px] w-auto h-auto relative tech-card-shadow cursor-pointer flex flex-col justify-between tech-card-shadow'>
       <div className='p-2 text-end flex justify-end'>
-        {
-          listPlat
-        }
+        {listPlat}
       </div>
       <div className='p-2 place-self-center'>
         {props.icon}
