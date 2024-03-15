@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import ProfilInfo from './ProfilInfo.tsx'
 import DesignInfo from './DesignInfo.tsx'
+import Experience from '../Experience/Experience.tsx';
 
 const Hero = () => {
   return (
