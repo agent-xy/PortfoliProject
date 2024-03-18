@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* SWIPER */
+.swiper-pagination-bullet {
+  background-color: #00d9ff; /* Pontok háttérszíne */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ff00ff; /* Aktív pont háttérszíne */
+}
+
 .section {
   width: 100%;
   padding-left: 100px;

@@ -11,7 +11,7 @@ interface SkillCardProps {
 
 const SkillCard: React.FC<SkillCardProps> = ({ id, title, content, backgroundImage, onCardClick, isOpen }) => {
 
-  const [isCardOpen, setIsCardOpen] = useState(isOpen);
+  const [isCardOpen, setIsCardOpen] = useState();
   const cardRef = useRef(null);
 
   useEffect(() => {
@@ -19,7 +19,10 @@ const SkillCard: React.FC<SkillCardProps> = ({ id, title, content, backgroundIma
   }, [isOpen]);
 
   const handleClick = () => {
-    setIsCardOpen(!isCardOpen);
+    
+    if (isCardOpen) {
+      // setIsCardOpen(!isCardOpen);
+    }
     onCardClick(id);
   };
 

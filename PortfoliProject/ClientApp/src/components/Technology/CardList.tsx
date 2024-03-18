@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import SkillCard from './SkillCard.tsx';
 import { motion } from 'framer-motion';
+import { FreeMode, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 // Tech
 import { FaReact } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
@@ -64,11 +66,13 @@ const otherTech: TechItem[] = [
 
 function renderList (list) {
   return list.map((tech, index) => 
-    <TechCard key={index}
-    platforms={tech.platforms}
-    icon={tech.icon}
-    name={tech.name}
-    />
+    <SwiperSlide>
+      <TechCard key={index}
+        platforms={tech.platforms}
+        icon={tech.icon}
+        name={tech.name}
+      />
+    </SwiperSlide>
   );
 }
 
@@ -76,27 +80,28 @@ function listStyle(techList) {
 
   const rendList = renderList(techList);
 
-  // if (rendList.length >=  5) {
-  //   return (
-  //     // Itt legyen lapozni, ha legalább 5 kártya van
-  //     <div>
-
-  //     </div>
-  //   );
-  // } else {
-  //   return (
-  //     <div className='flex flex-row gap-2'>
-  //       {
-  //         rendList
-  //       }
-  //     </div>
-  //   );
-  // }
   return (
-    <div className='flex flex-row gap-2'>
-      {
-        rendList
-      }
+    <div className=''>
+      <Swiper
+      spaceBetween={20}
+      slidesPerView="auto"
+      loop={true}
+      navigation
+      // freeMode={true}
+      style={{ '--swiper-slide-width': 'auto' }}
+      pagination={{ clickable: true }} // Hozzáadott Pagination beállítás
+      breakpoints={{
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 4 },
+      }}
+      watchOverflow={true}
+      modules={[Pagination]}
+      >
+        {
+          rendList
+        }
+      </Swiper>
     </div>
   );
 }
@@ -108,7 +113,8 @@ const CardList = () => {
   const handleCardClick = (cardId) => {
     setActiveCard((prevActiveCard) => {
       if (prevActiveCard === cardId) {
-        return null;
+        // return null;
+        return cardId;
       } else {
         return cardId;
       }
